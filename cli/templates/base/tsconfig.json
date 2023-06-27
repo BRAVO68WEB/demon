@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "emitDecoratorMetadata": true,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "lib": ["es2018", "es5", "dom"],
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "noImplicitAny": false,
+        "outDir": "build",
+        "resolveJsonModule": true,
+        "sourceMap": false,
+        "strict": true,
+        "target": "ES2017",
+        "typeRoots": ["node_modules/@types", "types"]
+    },
+    "exclude": ["node_modules/**/*", "build/**/*"],
+    "files": ["types/index.d.ts"],
+    "include": ["**/*.ts", "**/*.tsx", "**/*.json", "**/*.js"],
+    "ts-node": {
+        "swc": true
+    }
+}

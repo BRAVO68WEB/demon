@@ -6,7 +6,7 @@
   Easy to use, fast and lightweight framework for building modern web APIs using Express and TypeScript along Hasura GraphQL Engine.
 </p>
 <p align="center">
-  Get started with squid by running `npx create-demon-app@latest` 
+  Get started with squid by running `npx create-demon-app@latest`
 
 ## Getting Started
 
