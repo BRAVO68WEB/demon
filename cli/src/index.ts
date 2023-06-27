@@ -2,18 +2,35 @@
 
 import { clear } from "node:console";
 
-const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+import * as helpers from "./helpers";
+import scafoldProject from "./scaffold";
+import { welcome } from "./utils";
+import * as utils from "./utils";
 
-const greeting = {
-    initial: "Welcome to the Create Demon APP CLI",
-    final: "This CLI will help you create a new Demon APP",
-};
+const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
 const main = async () => {
     clear();
-    console.log(greeting.initial);
     await sleep(1000);
-    console.log(greeting.final);
+    welcome();
+    const projectName = (await helpers.getNewProjectName()) as string;
+    const ci = (await helpers.getCi()) as string[];
+    const eslint = (await helpers.getLint()) as boolean;
+    const prettier = (await helpers.getPrettier()) as boolean;
+    (await helpers.gitInit(projectName)) as boolean;
+    const packageManager = (await helpers.getPkgManager()) as string;
+    const isInstallDependencies = (await utils.isInstallDependencies()) as boolean;
+    await scafoldProject({
+        projectName,
+        ci,
+        eslint,
+        prettier,
+    });
+    if (isInstallDependencies) {
+        utils.installDependencies(projectName, packageManager);
+    } else {
+        utils.nextSteps(projectName, packageManager, isInstallDependencies);
+    }
 };
 
 process.on("SIGINT", () => {

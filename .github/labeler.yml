@@ -1,17 +1,17 @@
 cli:
-- cli/*
+    - cli/*
 
 documentation:
-- docs
+    - docs
 
 github-actions:
-- .github/workflows/*
+    - .github/workflows/*
 
 github-meta:
-- .github/**/*
+    - .github/**/*
 
 dependencies:
-- package.json
-- pnpm-lock.yaml
-- cli/package.json
-- docs/package.json
+    - package.json
+    - pnpm-lock.yaml
+    - cli/package.json
+    - docs/package.json
