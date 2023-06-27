@@ -5,6 +5,7 @@
         "unicorn/no-empty-file": "off",
         "unicorn/template-indent": "off",
         "sonarjs/cognitive-complexity": "off",
-        "unicorn/no-array-reduce": "off"
+        "unicorn/no-array-reduce": "off",
+        "@typescript-eslint/no-explicit-any": "off"
     }
 }
