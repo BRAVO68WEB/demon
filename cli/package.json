@@ -22,6 +22,7 @@
         "build": "tsup",
         "clean": "rm -rf dist node_modules",
         "dev": "tsup --watch",
+        "lint": "tsup && eslint --fix . --cache",
         "pub:beta": "pnpm build && npm publish --tag beta",
         "pub:release": "pnpm build && npm publish",
         "start": "node dist/index.js"

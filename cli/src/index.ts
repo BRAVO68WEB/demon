@@ -4,11 +4,16 @@ import { clear } from "node:console";
 
 const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
+const greeting = {
+    initial: "Welcome to the Create Demon APP CLI",
+    final: "This CLI will help you create a new Demon APP",
+};
+
 const main = async () => {
     clear();
-    console.log("Welcome to the Create Demon APP CLI");
+    console.log(greeting.initial);
     await sleep(1000);
-    console.log("This CLI will help you create a new Demon APP");
+    console.log(greeting.final);
 };
 
 process.on("SIGINT", () => {

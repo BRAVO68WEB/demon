@@ -1,0 +1,17 @@
+cli:
+- cli/*
+
+documentation:
+- docs
+
+github-actions:
+- .github/workflows/*
+
+github-meta:
+- .github/**/*
+
+dependencies:
+- package.json
+- pnpm-lock.yaml
+- cli/package.json
+- docs/package.json
