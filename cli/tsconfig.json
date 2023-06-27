@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "checkJs": true,
+        "paths": {
+            "~/*": ["./src/*"]
+        }
+    },
+    "extends": "@bravo68web/tsconfig/base.json",
+    "include": ["src", "tsup.config.ts"]
+}
