@@ -2,6 +2,10 @@
     "$schema": "https://json.schemastore.org/eslintrc",
     "extends": "@bravo68web/eslint-config/code-style",
     "rules": {
-        "unicorn/no-empty-file": "off"
+        "unicorn/no-empty-file": "off",
+        "unicorn/template-indent": "off",
+        "sonarjs/cognitive-complexity": "off",
+        "unicorn/no-array-reduce": "off",
+        "@typescript-eslint/no-explicit-any": "off"
     }
 }
